@@ -396,6 +396,13 @@
       <parent link="${prefix}link_6"/>
       <child link="${prefix}flange"/>
     </joint>
+    <!-- mirror -->
+    <link name="${prefix}flange_m"/>
+    <joint type="fixed" name="${prefix}joint_6_m-flange_m">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}link_6_m"/>
+      <child link="${prefix}flange_m"/>
+    </joint>
 
     <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
     <link name="${prefix}tool0" />
@@ -403,6 +410,13 @@
       <origin xyz="0 0 0" rpy="0 ${radians(90)} 0" />
       <parent link="${prefix}flange" />
       <child link="${prefix}tool0" />
+    </joint>
+    <!-- mirror -->
+    <link name="${prefix}tool0_m" />
+    <joint name="${prefix}link_6_m-tool0_m" type="fixed">
+      <origin xyz="0 0 0" rpy="0 ${radians(90)} 0" />
+      <parent link="${prefix}flange_m" />
+      <child link="${prefix}tool0_m" />
     </joint>
   </xacro:macro>
 </robot>
