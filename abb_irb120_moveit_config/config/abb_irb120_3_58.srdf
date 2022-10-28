@@ -23,6 +23,7 @@
         <joint name="joint_4" value="0" />
         <joint name="joint_5" value="0" />
         <joint name="joint_6" value="0" />
+        <joint name="joint_7" value="0" />
     </group_state>
         <!-- Second arm mirror -->
     <group_state name="all_zero" group="manipulator_m">
@@ -32,10 +33,12 @@
         <joint name="joint_4_m" value="0" />
         <joint name="joint_5_m" value="0" />
         <joint name="joint_6_m" value="0" />
+        <joint name="joint_7_m" value="0" />
     </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="base_link" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="dummy" link2="base_link" reason="Never" />
     <disable_collisions link1="base_link" link2="link_1" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="link_2" reason="Never" />
     <disable_collisions link1="link_1" link2="link_2" reason="Adjacent" />
@@ -49,8 +52,9 @@
     <disable_collisions link1="link_4" link2="link_6" reason="Default" />
     <disable_collisions link1="link_5" link2="link_6" reason="Adjacent" />
     <!-- Second arm mirror -->
-    <disable_collisions link1="base_link" link2="link_1_m" reason="Adjacent" />
-    <disable_collisions link1="base_link" link2="link_2_m" reason="Never" />
+    <disable_collisions link1="dummy" link2="base_link_m" reason="Never" />
+    <disable_collisions link1="base_link_m" link2="link_1_m" reason="Adjacent" />
+    <disable_collisions link1="base_link_m" link2="link_2_m" reason="Never" />
     <disable_collisions link1="link_1_m" link2="link_2_m" reason="Adjacent" />
     <disable_collisions link1="link_2_m" link2="link_3_m" reason="Adjacent" />
     <disable_collisions link1="link_2_m" link2="link_5_m" reason="Never" />
