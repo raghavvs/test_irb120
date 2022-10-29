@@ -7,3 +7,14 @@ controller_list:
       - joint_4
       - joint_5
       - joint_6
+      - joint_7
+  - name: fake_manipulator_m_controller
+    joints:
+      - joint_1_m
+      - joint_2_m
+      - joint_3_m
+      - joint_4_m
+      - joint_5_m
+      - joint_6_m
+      - joint_7_m
+  
