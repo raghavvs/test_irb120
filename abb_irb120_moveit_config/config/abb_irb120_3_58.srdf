@@ -42,6 +42,7 @@
         <joint name="joint_6" value="0" />
         <joint name="joint_7" value="0" />
     </group_state>
+    
     <group_state name="all_zero" group="manipulator_m">
         <joint name="joint_1_m" value="0" /> 
         <joint name="joint_2_m" value="0" />
@@ -57,8 +58,17 @@
         <group name="manipulator_m" />
     </group>
 
+    <end_effector name="eef" parent_link="link_5" group="manipulator"/>
+    <end_effector name="eef_m" parent_link="link_5_m" group="manipulator_m"/>
+
+    <!--<group name="end_effector">
+        <group name="finger_1" />
+        <group name="finger_2" />
+    </group> -->
+
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="dummy" />
+    <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="base" />
     <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="base_link" />
     <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="base_link_m" />
 
