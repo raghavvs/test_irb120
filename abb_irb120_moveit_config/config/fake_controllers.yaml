@@ -1,7 +1,6 @@
 controller_list:
   - name: fake_manipulator_controller
     joints:
-      - joint_1
       - joint_2
       - joint_3
       - joint_4
@@ -10,7 +9,6 @@ controller_list:
       - joint_7
   - name: fake_manipulator_m_controller
     joints:
-      - joint_1_m
       - joint_2_m
       - joint_3_m
       - joint_4_m
@@ -19,14 +17,12 @@ controller_list:
       - joint_7_m
   - name: fake_dual_arm
     joints:
-      - joint_1
       - joint_2
       - joint_3
       - joint_4
       - joint_5
       - joint_6
       - joint_7
-      - joint_1_m
       - joint_2_m
       - joint_3_m
       - joint_4_m
