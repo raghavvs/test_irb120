@@ -54,8 +54,8 @@
         <group name="manipulator_m" />
     </group>
 
-    <end_effector name="eef" parent_link="link_5" group="manipulator"/>
-    <end_effector name="eef_m" parent_link="link_5_m" group="manipulator_m"/>
+    <end_effector name="eef" parent_link="tool0" group="manipulator"/>
+    <end_effector name="eef_m" parent_link="tool0_m" group="manipulator_m"/>
 
     <group name="end_effector">
         <group name="manipulator" />
