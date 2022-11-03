@@ -276,14 +276,14 @@
         <inertia ixx="0.000404891" ixy="1.61943E-06" ixz="8.46805E-07" iyy="0.000892825" iyz="-1.51792E-08" izz="0.000815468"/>
       </inertial>
       <visual>
-        <origin xyz="0 0 0" rpy="0 3.14159 0"/>
+        <origin xyz="0 0 0" rpy="3.14159 3.14159 0"/>
         <geometry>
           <mesh filename="package://abb_irb120_support/meshes/irb120_3_58/visual/link_5.stl"/>
         </geometry>
         <xacro:material_abb_orange />
       </visual>
       <collision>
-        <origin xyz="0 0 0" rpy="0 3.14159 0"/>
+        <origin xyz="0 0 0" rpy="3.14159 3.14159 0"/>
         <geometry>
           <mesh filename="package://abb_irb120_support/meshes/irb120_3_58/collision/link_5.stl"/>
         </geometry>
