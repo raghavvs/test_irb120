@@ -1,5 +1,5 @@
 controller_list:
-  - name: manipulator_controller
+  - name: abb_irb120_3_58/manipulator_controller
     action_ns: joint_trajectory_action
     type: FollowJointTrajectory
     joints: 
@@ -9,7 +9,7 @@ controller_list:
       - joint_5
       - joint_6 
       - joint_7 
-  - name: manipulator_controller
+  - name: abb_irb120_3_58/manipulator_m_controller
     action_ns: joint_trajectory_action
     type: FollowJointTrajectory
     joints:
