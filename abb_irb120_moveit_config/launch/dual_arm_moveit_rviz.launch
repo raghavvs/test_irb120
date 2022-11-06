@@ -1,9 +1,16 @@
 <launch>
 
   <group ns="manipulator">
+    <remap from="/follow_joint_trajectory" to="abb_irb120_3_58/manipulator_controller/follow_joint_trajectory"/>
     <arg name="debug" default="false" />
     <arg unless="$(arg debug)" name="launch_prefix" value="" />
     <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+    <include file="$(find abb_irb120_moveit_config)/launch/planning_context.launch" >
+      <arg name="load_robot_description" value="true" />
+    </include>
+
+    <remap from="/robot_description" to="robot_description/manipulator"/>
 
     <arg name="config" default="true" />
     <arg unless="$(arg config)" name="command_args" value="" />
@@ -16,9 +23,16 @@
   </group>
 
   <group ns="manipulator_m">
+    <remap from="/follow_joint_trajectory" to="abb_irb120_3_58/manipulator_m_controller/follow_joint_trajectory"/>
     <arg name="debug" default="false" />
     <arg unless="$(arg debug)" name="launch_prefix" value="" />
     <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+    <include file="$(find abb_irb120_moveit_config)/launch/planning_context.launch" >
+      <arg name="load_robot_description" value="true" />
+    </include>
+
+    <remap from="/robot_description" to="robot_description/manipulator_m"/>
 
     <arg name="config" default="true" />
     <arg unless="$(arg config)" name="command_args" value="" />

@@ -195,5 +195,5 @@ dual_arm:
     - LazyPRMstarkConfigDefault
     - SPARSkConfigDefault
     - SPARStwokConfigDefault
-  projection_evaluator: joints(joint_2,joint_3)
+  projection_evaluator: joints(joint_2,joint_3, joint_2_m, joint_3_m)
   longest_valid_segment_fraction: 0.005
