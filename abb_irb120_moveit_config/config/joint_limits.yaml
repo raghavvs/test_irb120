@@ -1,4 +1,5 @@
 joint_limits:
+  ns: /mp
   joint_2:
     has_velocity_limits: true
     max_velocity: 4.36332
@@ -29,6 +30,7 @@ joint_limits:
     max_velocity: 7.33038
     has_acceleration_limits: true
     max_acceleration: 1.46608
+  ns: /mp_m
   joint_2_m:
     has_velocity_limits: true
     max_velocity: 4.36332
